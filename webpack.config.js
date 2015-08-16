@@ -1,19 +1,34 @@
+var path = require("path");
+var webpack = require('webpack');
+
 module.exports = {
-  entry: {
+  watch: false,
+  entry:{
+    devserver: ['webpack-dev-server/client?http://0.0.0.0:8080', 'webpack/hot/only-dev-server','./app/shotradar/main.jsx'], // WebpackDevServer host and port]
     main: ['./app/main.jsx'],
-    fernet: ['./app/fernet/main.jsx']
+    shotradar: ['./app/shotradar/app.jsx']
   },
   output: {
-    path: './build',
-    filename: '[name].entry.js'
+
+    path: path.join(__dirname, 'build'),
+    filename: '[name].entry.js',
+    publicPath: '/build/'
   },
 
   module: {
     loaders: [
-      { test: /\.jsx$/, loader: 'babel-loader' },
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
-      { test: /\.less/, loader: 'style!css!less' },
-      { test: /\.(png|woff|woff2|ttf|svg|JPG|eot)$/, loader: 'url-loader?limit=100000' }
+      {
+        test: /\.jsx?$/,
+        loaders: ['react-hot', 'babel-loader'],
+        include: path.join(__dirname, 'app')
+      },
+      { test: /\.css$/, loader: 'style-loader!css-loader', include: path.join(__dirname, 'app') },
+      { test: /\.less/, loader: 'style!css!less', include: path.join(__dirname, 'app') },
+      { test: /\.(png|woff|woff2|ttf|svg|JPG|eot)$/, loader: 'url-loader?limit=100000', include: path.join(__dirname, 'app') }
     ]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ]
 };
