@@ -1,0 +1,19 @@
+{
+  "name": "npm",
+  "version": "0.0.1",
+  "description": "A front-end for keeping track of fernets using the fernet-sys backend",
+  "main": "index.js",
+  "dependencies": {
+    "react-essence": "0.0.24"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bjorngi/trt-fernetsys.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
