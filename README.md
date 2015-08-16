@@ -12,6 +12,7 @@
 
 ##Run dev server
 * ```npm start```
+* Go to ```localhost:8080/build/index.html```
 
 ##Static Compile
 * ```webpack webpack.config.js```
