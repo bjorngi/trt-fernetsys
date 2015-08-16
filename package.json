@@ -4,9 +4,15 @@
   "description": "A front-end for keeping track of fernets using the fernet-sys backend",
   "main": "index.js",
   "dependencies": {
-    "react-essence": "0.0.24"
+    "react": "^0.13.3",
+    "react-essence": "0.0.24",
+    "react-router": "^0.13.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jsx-loader": "^0.13.2",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
