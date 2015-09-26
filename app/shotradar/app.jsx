@@ -16,6 +16,7 @@ module.exports = React.createClass({
         <HeaderBar />
         <Block classes={"brick brick-12 e-padding-top-75"}>
           <ShotList header = 'Pendig Shots' />
+          <ShotList header = 'Completed Shots' />
         </Block>
       </div>
     )
