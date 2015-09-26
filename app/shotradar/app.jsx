@@ -1,6 +1,6 @@
 'use strict';
 var Essence = require("react-essence");
-var ListItem = require("../shotradar/components/listitem.jsx");
+var FernetListItem = require("../shotradar/components/fernetlistitem.jsx");
 import "../css/essence.css";
 import "../css/icons.css";
 
@@ -36,6 +36,7 @@ var React = Essence.React,
   Input = Essence.Input,
   InputItem = Essence.InputItem,
   List = Essence.List,
+  ListItem = Essence.ListItem,
   Menu = Essence.Menu,
   MenuItem = Essence.MenuItem,
   Navigation = Essence.Navigation,
@@ -78,6 +79,7 @@ var React = Essence.React,
 // );
 
 module.exports = React.createClass({
+
   render: function() {
     return (
       <div>
@@ -159,27 +161,40 @@ module.exports = React.createClass({
             />
           </Btn>
         </AppBar>
-        <ListItem
-          name = 'Dag Jomar'
-          image = 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/13e/31c/2e59425.jpg'
-          timestamp = '1443276231'
-          text = 'DID SOME SHIT, yo'
-        />
-<ListItem
-          name = 'Dag Jomar'
-          image = 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/13e/31c/2e59425.jpg'
-          timestamp = '1443276231'
-          text = 'DID SOME SHIT, yo'
-          />
-<ListItem
-          name = 'Dag Jomar'
-          image = 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/13e/31c/2e59425.jpg'
-          timestamp = '1443276231'
-          text = 'DID SOME SHIT, yo'
-          />
 
+        <List type={'two-line'} >
+
+          <Divider classes={'thinnest e-background-grey-100'} />
+
+          <FernetListItem
+                    name = 'Dag Jomar'
+                    image = 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/13e/31c/2e59425.jpg'
+                    timestamp = '1443276231'
+                    text = 'DID SOME SHIT, yo'
+                    />
+
+          <Divider classes={'thinnest e-background-grey-100'} />
+
+          <FernetListItem
+                    name = 'Dag Jomar'
+                    image = 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/13e/31c/2e59425.jpg'
+                    timestamp = '1443276231'
+                    text = 'DID SOME SHIT, yo'
+                    />
+
+          <Divider classes={'thinnest e-background-grey-100'} />
+
+          <FernetListItem
+                    name = 'Dag Jomar'
+                    image = 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/000/13e/31c/2e59425.jpg'
+                    timestamp = '1443276231'
+                    text = 'DID SOME SHIT, yo'
+                    />
+
+          <Divider classes={'thinnest e-background-grey-100'} />
+
+        </List>
       </div>
-
     )
   }
 });
