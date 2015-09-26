@@ -1,6 +1,6 @@
 'use strict';
 var React = require('react');
-var Essence = require("react-essence");
+import {Block} from 'react-essence';
 var FernetListItem = require("../shotradar/components/fernetlistitem.jsx");
 var HeaderBar = require("../shotradar/components/header.jsx");
 var ShotList = require("../shotradar/components/shotlist.jsx");
@@ -14,9 +14,9 @@ module.exports = React.createClass({
     return (
       <div>
         <HeaderBar />
-        <ShotList 
-          header = 'Pendig Shots'
-        />
+        <Block classes={"brick brick-12 e-padding-top-75"}>
+          <ShotList header = 'Pendig Shots' />
+        </Block>
       </div>
     )
   }
