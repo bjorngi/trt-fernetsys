@@ -10,7 +10,8 @@ var ListItem = React.createClass({
     text: React.PropTypes.string.isRequired,
   },
   render() {
-    var timestamp = moment("10/10/15 09:00").fromNow(true);
+    var rawTimestamp = moment("10/10/15 09:00").fromNow(true).split(' ');
+    var timestamp = `${rawTimestamp[0]}${rawTimestamp[1].slice(0,1)}`
     
     return (
       <div className = 'listitem'>
