@@ -10,12 +10,10 @@ var ShotList = React.createClass({
   render() {
     return (
       <div>
-        <Text type='h4' classes={"e-display-1"}>
+        <Text type='h5' classes={"e-headline e-text-grey-500"}>
           {this.props.header}
         </Text>
         <List type={'two-line'} >
-
-          <Divider classes={'thinnest e-background-grey-100'} />
 
           <FernetListItem
             name = 'Dag Jomar'
@@ -24,7 +22,7 @@ var ShotList = React.createClass({
             text = 'DID SOME SHIT, yo'
           />
 
-        <Divider classes={'thinnest e-background-grey-100'} />
+        <Divider classes={'thinnest e-background-grey-100 e-no-margin'} />
 
         <FernetListItem
           name = 'Dag Jomar'
@@ -33,7 +31,7 @@ var ShotList = React.createClass({
           text = 'DID SOME SHIT, yo'
         />
 
-      <Divider classes={'thinnest e-background-grey-100'} />
+      <Divider classes={'thinnest e-background-grey-100 e-no-margin'} />
 
       <FernetListItem
         name = 'Dag Jomar'
@@ -42,7 +40,7 @@ var ShotList = React.createClass({
         text = 'DID SOME SHIT, yo'
       />
 
-    <Divider classes={'thinnest e-background-grey-100'} />
+      <Divider classes={'thinnest e-background-grey-100 e-no-margin'} />
 
   </List>
 </div>
