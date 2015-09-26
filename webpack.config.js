@@ -17,11 +17,12 @@ module.exports = {
 
   module: {
     loaders: [
-      {
-        test: /\.jsx?$/,
-        loaders: ['react-hot', 'babel-loader'],
-        include: path.join(__dirname, 'app')
-      },
+      //{
+      //  test: /\.jsx?$/,
+      //  loaders: ['react-hot', 'babel-loader'],
+      //  include: path.join(__dirname, 'app')
+      //},
+      { test: /\.jsx$/, loader: 'babel-loader' },
       { test: /\.css$/, loader: 'style-loader!css-loader', include: path.join(__dirname, 'app') },
       { test: /\.less/, loader: 'style!css!less', include: path.join(__dirname, 'app') },
       { test: /\.(png|woff|woff2|ttf|svg|JPG|eot)$/, loader: 'url-loader?limit=100000', include: path.join(__dirname, 'app') }
@@ -30,5 +31,8 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
-  ]
+  ],
+  resolve: {
+    extentions: ['', '.js', '.jsx']
+  }
 };
